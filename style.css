@@ -5,7 +5,7 @@
     --text: #f3f4f6;
     --text-muted: #9ca3af;
     --accent: #38bdf8;
-    --accent-glow: rgba(56, 189, 248, 0.15);
+    --accent-glow: rgba(56, 189, 248, 0.2);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -71,28 +71,41 @@ body {
     font-weight: 600;
 }
 
-/* Interactive Lively Hero Banner */
+/* Interactive Lively Hero Banner with Animation */
 .hero {
     position: relative;
-    padding: 160px 20px 100px 20px;
+    padding: 180px 20px 120px 20px;
     text-align: center;
-    background: radial-gradient(circle at center, #1e293b 0%, var(--bg) 70%);
+    background: radial-gradient(circle at center, #1e293b 0%, var(--bg) 75%);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
 }
 
+/* Animated pulsing background glow */
 .hero::before {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     background: var(--accent-glow);
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: blur(80px);
+    filter: blur(90px);
     z-index: 0;
+    animation: pulseGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 1;
+    }
 }
 
 .hero-content {
@@ -100,6 +113,18 @@ body {
     z-index: 1;
     max-width: 800px;
     margin: 0 auto;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .badge {
@@ -107,24 +132,26 @@ body {
     background: rgba(56, 189, 248, 0.1);
     color: var(--accent);
     border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 6px 14px;
+    padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: 3.2rem;
+    line-height: 1.15;
     margin: 0 0 15px 0;
     color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
 .hero p {
     font-size: 1.15rem;
     color: var(--text-muted);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .hero-buttons {
@@ -147,9 +174,9 @@ body {
 }
 
 .btn.primary:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(56, 189, 248, 0.4);
+    opacity: 0.95;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
 }
 
 .btn.secondary {
@@ -161,6 +188,7 @@ body {
 .btn.secondary:hover {
     border-color: var(--accent);
     color: var(--accent);
+    transform: translateY(-3px);
 }
 
 /* Container Layout */
