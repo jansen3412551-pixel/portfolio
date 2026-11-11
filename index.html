@@ -3,242 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clint Jansen Villamor | E-Commerce Web Developer & SEO Specialist</title>
-    <style>
-        :root {
-            --bg: #0d1117;
-            --card-bg: #161b22;
-            --border: #30363d;
-            --text: #c9d1d9;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --transition: all 0.3s ease;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        /* Hero Banner with Profile Picture */
-        .hero {
-            background: linear-gradient(135deg, #161b22 0%, #1f242c 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            margin-bottom: 20px;
-            transition: var(--transition);
-        }
-        .profile-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
-        }
-        .hero h1 {
-            color: var(--accent);
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-        }
-        .hero h2 {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin: 0 0 20px 0;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: #0d1117;
-            padding: 10px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-        /* Container Layout */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .section {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border: 1px solid var(--border);
-        }
-        h3 {
-            color: var(--accent);
-            margin-top: 0;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-            font-size: 1.4rem;
-        }
-        /* Interactive Grids & Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .card {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        /* Interactive Hover Effect */
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        }
-        .card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border);
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card h4 {
-            margin: 0 0 8px 0;
-            color: var(--text);
-            font-size: 1.1rem;
-        }
-        .card p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-        /* Video Container */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 6px;
-            margin-top: 15px;
-            border: 1px solid var(--border);
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        /* Testimonials */
-        .testimonial {
-            font-style: italic;
-            color: var(--text);
-            background: var(--bg);
-            padding: 15px 20px;
-            border-left: 4px solid var(--accent);
-            border-radius: 0 6px 6px 0;
-            margin-top: 15px;
-        }
-        .testimonial cite {
-            display: block;
-            margin-top: 8px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-style: normal;
-            font-weight: 600;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Clint Jansen Villamor | E-Commerce Developer & SEO Specialist</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Hero Banner with Picture -->
-    <section class="hero">
-        <!-- Replace src with your photo URL or local file path like "images/profile.jpg" -->
-        <img src="https://via.placeholder.com/130" alt="Clint Jansen Villamor" class="profile-img">
-        <h1>Clint Jansen Villamor</h1>
-        <h2>Freelance E-Commerce Web Developer, Digital Marketer & SEO Specialist</h2>
-        <a href="#contact" class="btn">Get in Touch</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">CJV.</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#stores">Live Stores</a>
+            <a href="#impact">Impact</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Interactive Hero Banner -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 Available for Freelance & Custom Shopify Projects</div>
+            <h1>Architecting High-Converting E-Commerce Experiences</h1>
+            <p>Specializing in custom Shopify Liquid development, performance optimization, Google/Meta Ads, and multi-channel SEO growth.</p>
+            <div class="hero-buttons">
+                <a href="#stores" class="btn primary">Explore My Work</a>
+                <a href="#contact" class="btn secondary">Let's Talk</a>
+            </div>
+        </div>
     </section>
 
     <div class="container">
-        <!-- About Section -->
-        <section class="section">
-            <h3>About Me</h3>
-            <p>Results-driven professional specializing in custom Shopify development, clean Liquid theme implementations, Google Ads, Meta Ads, and comprehensive SEO and marketplace integrations.</p>
-        </section>
 
-        <!-- Featured Projects with Images & Interactive Hover -->
-        <section class="section">
-            <h3>Featured Projects</h3>
+        <!-- Live Shopify Stores Section -->
+        <section id="stores" class="section">
+            <div class="section-header">
+                <h2>Live Shopify Stores Managed</h2>
+                <p>Real production storefronts optimized for conversion speed and revenue growth.</p>
+            </div>
             <div class="grid">
-                <div class="card">
-                    <img src="https://via.placeholder.com/400x200" alt="Orlena Official Preview">
+                <div class="card store-card">
+                    <div class="store-banner orlena-bg"></div>
                     <div class="card-content">
-                        <h4>Orlena Official</h4>
-                        <p>Managed custom Shopify theme development, layout updates, and targeted Google Ads campaigns for fashion e-commerce.</p>
+                        <h3>Orlena Official</h3>
+                        <span class="tag">Fashion & Apparel</span>
+                        <p>Custom Shopify theme development, custom Liquid sections, layout refinements, and targeted Google Ads campaign scaling.</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/400x200" alt="Storage Organisers Preview">
+                <div class="card store-card">
+                    <div class="store-banner storage-bg"></div>
                     <div class="card-content">
-                        <h4>Storage Organisers</h4>
-                        <p>Executed comprehensive e-commerce maintenance, SEO auditing, content creation, and technical optimization.</p>
+                        <h3>Storage Organisers</h3>
+                        <span class="tag">E-Commerce Retail</span>
+                        <p>Comprehensive store maintenance, technical SEO audits, content creation, and digital PR management.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Video Showcase Section -->
-        <section class="section">
-            <h3>Project Walkthrough / Demo Video</h3>
-            <p>Watch a brief breakdown of custom Shopify section implementations and performance optimization workflows.</p>
-            <div class="video-wrapper">
-                <!-- Replace the src with your YouTube embed link or video file -->
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project Demo Video" allowfullscreen></iframe>
+        <!-- Contributions & Impact Metrics -->
+        <section id="impact" class="section">
+            <div class="section-header">
+                <h2>Measurable Impact & Contributions</h2>
+                <p>The technical improvements and optimizations delivered to client brands.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Clean Code</h3>
+                    <p>Eliminated heavy third-party app bloat by writing native, high-performance custom Liquid, HTML, and CSS sections.</p>
+                </div>
+                <div class="metric-card">
+                    <h3>ROAS Growth</h3>
+                    <p>Structured high-converting Google Ads and Meta Ads configurations to scale daily advertising return on ad spend.</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Feed Optimization</h3>
+                    <p>Streamlined Google Merchant Center product feeds and marketplace synchronizations with zero data errors.</p>
+                </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section class="section">
-            <h3>Client Testimonials</h3>
-            <div class="testimonial">
-                &ldquo;Clint completely transformed our store's performance and custom Shopify liquid templates. Conversions and site speed noticeably improved right after launch.&rdquo;
-                <cite>&mdash; Isaac, Orlena Official</cite>
+        <section id="testimonials" class="section">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>Direct feedback from founders and managers I collaborate with.</p>
             </div>
-            <div class="testimonial">
-                &ldquo;Exceptional technical execution on our SEO audits and multi-channel marketplace data feeds. Highly recommended.&rdquo;
-                <cite>&mdash; Ahmed, Storage Organisers</cite>
+            <div class="grid">
+                <div class="testimonial-card">
+                    <p>&ldquo;Clint completely transformed our store's performance and custom Shopify liquid templates. Conversions and site speed noticeably improved right after launch.&rdquo;</p>
+                    <cite>&mdash; Isaac, Boss & Client at Orlena Official</cite>
+                </div>
+                <div class="testimonial-card">
+                    <p>&ldquo;Exceptional technical execution on our SEO audits, content strategy, and multi-channel marketplace management. Highly reliable professional.&rdquo;</p>
+                    <cite>&mdash; Ahmed, Manager at Storage Organisers</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <p>I am Clint Jansen Villamor, a freelance e-commerce web developer, digital marketer, and SEO specialist based in the Philippines. I combine rigorous commercial discipline in web design and performance marketing with a hands-on technical approach—ensuring your store is fast, scalable, and built natively without unnecessary app clutter.</p>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h3>Contact</h3>
-            <p>Ready to scale your e-commerce platform or optimize your online visibility? Let's talk about your project.</p>
-            <p><strong>Email:</strong> your-email@example.com</p>
+        <section id="contact" class="section contact-section">
+            <h2>Let's Build Something Great</h2>
+            <p>Ready to optimize your e-commerce storefront or scale your ad campaigns? Get in touch directly.</p>
+            <a href="mailto:your-email@example.com" class="btn primary email-btn">Send Me an Email</a>
         </section>
+
     </div>
 
     <footer>
