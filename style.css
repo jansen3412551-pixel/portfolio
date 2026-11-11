@@ -272,6 +272,22 @@ body {
     margin: 0;
 }
 
+/* Store Links inside Cards */
+.store-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+
+.store-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
 /* Metrics Grid */
 .metrics-grid {
     display: grid;
