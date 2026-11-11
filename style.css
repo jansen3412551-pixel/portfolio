@@ -356,24 +356,45 @@ footer {
 }
 
 .store-screen {
-    height: 140px;
+    height: 180px;
     position: relative;
     background-size: cover;
     background-position: top center;
+    background-repeat: no-repeat;
     transition: var(--transition);
 }
 
-/* Store Preview Gradients */
-.orlena-screen { background: linear-gradient(135deg, #2b1055, #7597de); }
-.storage-screen { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-.james-screen { background: linear-gradient(135deg, #3e5151, #decba4); }
-.belcopia-screen { background: linear-gradient(135deg, #134e5e, #71b280); }
-.archic-screen { background: linear-gradient(135deg, #232526, #414345); }
-.rcn-screen { background: linear-gradient(135deg, #141e30, #243b55); }
-.kawartha-screen { background: linear-gradient(135deg, #1f4037, #99f2c8); }
-.depot-screen { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
-.prime-screen { background: linear-gradient(135deg, #2b5876, #4e4376); }
-.innov-screen { background: linear-gradient(135deg, #373b44, #4286f4); }
+/* Live Website Screenshot Previews */
+.orlena-screen { 
+    background-image: url('https://api.microlink.co/?url=https://orlenaofficial.com.au/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.storage-screen { 
+    background-image: url('https://api.microlink.co/?url=https://storageorganisers.com.au/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.james-screen { 
+    background-image: url('https://api.microlink.co/?url=https://jamesgarmour.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.belcopia-screen { 
+    background-image: url('https://api.microlink.co/?url=https://www.belcopia.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.archic-screen { 
+    background-image: url('https://api.microlink.co/?url=https://archicfurniture.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.rcn-screen { 
+    background-image: url('https://api.microlink.co/?url=https://rcncpas.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.kawartha-screen { 
+    background-image: url('https://api.microlink.co/?url=https://kawarthamarkingstakes.ca/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.depot-screen { 
+    background-image: url('https://api.microlink.co/?url=https://theeverythingdepot.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.prime-screen { 
+    background-image: url('https://api.microlink.co/?url=https://primefair.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
+.innov-screen { 
+    background-image: url('https://api.microlink.co/?url=https://innovdepot.com/&screenshot=true&meta=false&embed=screenshot.url'); 
+}
 
 .screen-overlay {
     position: absolute;
