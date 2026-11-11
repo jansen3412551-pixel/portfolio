@@ -3,21 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clint Jansen Villamor | E-Commerce Developer & SEO Specialist</title>
+    <title>Clint Jansen Villamor | E-Commerce Web Developer & SEO Specialist</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; background: #0d1117; color: #c9d1d9; }
-        h1 { color: #58a6ff; margin-bottom: 5px; }
-        h2 { color: #8b949e; font-size: 1.2rem; margin-top: 0; }
-        .section { background: #161b22; padding: 20px; border-radius: 6px; margin-top: 20px; border: 1px solid #30363d; }
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 { color: var(--accent); margin: 0 0 5px 0; font-size: 2.2rem; }
+        h2 { color: var(--text-muted); font-size: 1.2rem; font-weight: 400; margin: 0; }
+        .section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        h3 { color: var(--accent); margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .card h4 { margin: 0 0 8px 0; color: var(--text); }
+        .card p { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+        footer { text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem; }
     </style>
 </head>
 <body>
-    <h1>Clint Jansen Villamor</h1>
-    <h2>Freelance E-Commerce Web Developer, Digital Marketer & SEO Specialist</h2>
+
+    <header>
+        <h1>Clint Jansen Villamor</h1>
+        <h2>Freelance E-Commerce Web Developer, Digital Marketer & SEO Specialist</h2>
+    </header>
 
     <div class="section">
         <h3>About Me</h3>
-        <p>Specializing in custom Shopify development, Liquid implementations, Google Ads, Meta Ads, and search engine optimization.</p>
+        <p>Results-driven professional specializing in custom Shopify development, clean Liquid theme implementations, Google Ads, Meta Ads, and comprehensive SEO and marketplace integrations.</p>
     </div>
-</body>
+
+    <div class="section">
+        <h3>Core Expertise</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Custom Shopify Development</h4>
+                <p>Building clean, high-performance custom sections using Liquid, HTML, and CSS without heavy third-party apps.</p>
+            </div>
+            <div class="card">
+                <h4>Digital Marketing</h4>
+                <p>Managing high-ROI Google Ads and Meta Ads campaigns to scale e-commerce revenue and brand visibility.</p>
+            </div>
+            <div class="card">
+                <h4>SEO & Marketplace Feeds</h4>
+                <p>Optimizing technical search engine visibility, Google Merchant Center feeds, and multi-channel marketplace integrations.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Clint Jansen Villamor. Built with GitHub Pages.</p>
+    </body>
 </html>
