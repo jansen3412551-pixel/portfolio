@@ -364,37 +364,17 @@ footer {
     transition: var(--transition);
 }
 
-/* Live Website Screenshot Previews */
-.orlena-screen { 
-    background-image: url('https://api.microlink.co/?url=https://orlenaofficial.com.au/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.storage-screen { 
-    background-image: url('https://api.microlink.co/?url=https://storageorganisers.com.au/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.james-screen { 
-    background-image: url('https://api.microlink.co/?url=https://jamesgarmour.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.belcopia-screen { 
-    background-image: url('https://api.microlink.co/?url=https://www.belcopia.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.archic-screen { 
-    background-image: url('https://api.microlink.co/?url=https://archicfurniture.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.rcn-screen { 
-    background-image: url('https://api.microlink.co/?url=https://rcncpas.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.kawartha-screen { 
-    background-image: url('https://api.microlink.co/?url=https://kawarthamarkingstakes.ca/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.depot-screen { 
-    background-image: url('https://api.microlink.co/?url=https://theeverythingdepot.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.prime-screen { 
-    background-image: url('https://api.microlink.co/?url=https://primefair.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
-.innov-screen { 
-    background-image: url('https://api.microlink.co/?url=https://innovdepot.com/&screenshot=true&meta=false&embed=screenshot.url'); 
-}
+/* Robust Aesthetic Store Backgrounds (Prevents blank loading errors) */
+.orlena-screen { background: linear-gradient(135deg, #1e1b4b, #3b82f6, #9333ea); }
+.storage-screen { background: linear-gradient(135deg, #022330, #0ea5e9, #10b981); }
+.james-screen { background: linear-gradient(135deg, #1f2937, #d97706, #b45309); }
+.belcopia-screen { background: linear-gradient(135deg, #064e3b, #059669, #34d399); }
+.archic-screen { background: linear-gradient(135deg, #111827, #374151, #6b7280); }
+.rcn-screen { background: linear-gradient(135deg, #0f172a, #1e40af, #3b82f6); }
+.kawartha-screen { background: linear-gradient(135deg, #065f46, #059669, #6ee7b7); }
+.depot-screen { background: linear-gradient(135deg, #701a75, #db2777, #f59e0b); }
+.prime-screen { background: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa); }
+.innov-screen { background: linear-gradient(135deg, #111827, #2563eb, #9333ea); }
 
 .screen-overlay {
     position: absolute;
