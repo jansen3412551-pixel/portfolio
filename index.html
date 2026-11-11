@@ -12,6 +12,7 @@
             --text: #c9d1d9;
             --text-muted: #8b949e;
             --accent: #58a6ff;
+            --transition: all 0.3s ease;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -21,36 +22,50 @@
             color: var(--text);
             line-height: 1.6;
         }
-        /* Hero Banner Section */
+        /* Hero Banner with Profile Picture */
         .hero {
             background: linear-gradient(135deg, #161b22 0%, #1f242c 100%);
             border-bottom: 1px solid var(--border);
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
         }
         .hero h1 {
             color: var(--accent);
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin: 0 0 10px 0;
         }
         .hero h2 {
             color: var(--text-muted);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 400;
-            margin: 0 0 25px 0;
+            margin: 0 0 20px 0;
         }
         .btn {
             display: inline-block;
             background: var(--accent);
             color: #0d1117;
-            padding: 12px 24px;
+            padding: 10px 22px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            transition: opacity 0.2s;
+            transition: var(--transition);
         }
         .btn:hover {
             opacity: 0.9;
+            transform: translateY(-2px);
         }
         /* Container Layout */
         .container {
@@ -70,9 +85,9 @@
             margin-top: 0;
             border-bottom: 1px solid var(--border);
             padding-bottom: 10px;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
-        /* Grid Cards for Projects / Expertise */
+        /* Interactive Grids & Cards */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -82,11 +97,27 @@
         .card {
             background: var(--bg);
             border: 1px solid var(--border);
-            padding: 20px;
             border-radius: 6px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        /* Interactive Hover Effect */
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+        .card-content {
+            padding: 20px;
         }
         .card h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             color: var(--text);
             font-size: 1.1rem;
         }
@@ -94,6 +125,42 @@
             margin: 0;
             font-size: 0.95rem;
             color: var(--text-muted);
+        }
+        /* Video Container */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid var(--border);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Testimonials */
+        .testimonial {
+            font-style: italic;
+            color: var(--text);
+            background: var(--bg);
+            padding: 15px 20px;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 6px 6px 0;
+            margin-top: 15px;
+        }
+        .testimonial cite {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: normal;
+            font-weight: 600;
         }
         footer {
             text-align: center;
@@ -106,8 +173,10 @@
 </head>
 <body>
 
-    <!-- Hero Banner Section -->
+    <!-- Hero Banner with Picture -->
     <section class="hero">
+        <!-- Replace src with your photo URL or local file path like "images/profile.jpg" -->
+        <img src="https://via.placeholder.com/130" alt="Clint Jansen Villamor" class="profile-img">
         <h1>Clint Jansen Villamor</h1>
         <h2>Freelance E-Commerce Web Developer, Digital Marketer & SEO Specialist</h2>
         <a href="#contact" class="btn">Get in Touch</a>
@@ -120,37 +189,47 @@
             <p>Results-driven professional specializing in custom Shopify development, clean Liquid theme implementations, Google Ads, Meta Ads, and comprehensive SEO and marketplace integrations.</p>
         </section>
 
-        <!-- Core Expertise Section -->
-        <section class="section">
-            <h3>Core Expertise</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>Custom Shopify Development</h4>
-                    <p>Building clean, high-performance custom sections using Liquid, HTML, and CSS without heavy third-party apps.</p>
-                </div>
-                <div class="card">
-                    <h4>Digital Marketing</h4>
-                    <p>Managing high-ROI Google Ads and Meta Ads campaigns to scale e-commerce revenue and brand visibility.</p>
-                </div>
-                <div class="card">
-                    <h4>SEO & Marketplace Feeds</h4>
-                    <p>Optimizing technical search engine visibility, Google Merchant Center feeds, and multi-channel marketplace integrations.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
+        <!-- Featured Projects with Images & Interactive Hover -->
         <section class="section">
             <h3>Featured Projects</h3>
             <div class="grid">
                 <div class="card">
-                    <h4>Orlena Official</h4>
-                    <p>Managed custom Shopify theme development, layout updates, and targeted Google Ads campaigns for fashion e-commerce.</p>
+                    <img src="https://via.placeholder.com/400x200" alt="Orlena Official Preview">
+                    <div class="card-content">
+                        <h4>Orlena Official</h4>
+                        <p>Managed custom Shopify theme development, layout updates, and targeted Google Ads campaigns for fashion e-commerce.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <h4>Storage Organisers</h4>
-                    <p>Executed comprehensive e-commerce maintenance, SEO auditing, content creation, and technical optimization.</p>
+                    <img src="https://via.placeholder.com/400x200" alt="Storage Organisers Preview">
+                    <div class="card-content">
+                        <h4>Storage Organisers</h4>
+                        <p>Executed comprehensive e-commerce maintenance, SEO auditing, content creation, and technical optimization.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Video Showcase Section -->
+        <section class="section">
+            <h3>Project Walkthrough / Demo Video</h3>
+            <p>Watch a brief breakdown of custom Shopify section implementations and performance optimization workflows.</p>
+            <div class="video-wrapper">
+                <!-- Replace the src with your YouTube embed link or video file -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project Demo Video" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <h3>Client Testimonials</h3>
+            <div class="testimonial">
+                &ldquo;Clint completely transformed our store's performance and custom Shopify liquid templates. Conversions and site speed noticeably improved right after launch.&rdquo;
+                <cite>&mdash; Isaac, Orlena Official</cite>
+            </div>
+            <div class="testimonial">
+                &ldquo;Exceptional technical execution on our SEO audits and multi-channel marketplace data feeds. Highly recommended.&rdquo;
+                <cite>&mdash; Ahmed, Storage Organisers</cite>
             </div>
         </section>
 
